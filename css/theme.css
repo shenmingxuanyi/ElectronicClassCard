@@ -1,0 +1,14 @@
+.col {
+    position: relative;
+    min-height: 1px;
+    padding: .2vmin .2vmin;
+    float: left;
+}
+
+.thumbnail {
+    margin-bottom: 0;
+    -webkit-border-radius:1px;
+    -moz-border-radius: 1px;
+    -o-border-radius: 1px;
+    border-radius: 1px;
+}

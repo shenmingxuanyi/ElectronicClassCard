@@ -5,7 +5,7 @@
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>宾王中学</title>
+    <title>电子班牌</title>
 
     <!-- Bootstrap -->
     <link href="lib/bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet">
@@ -28,13 +28,237 @@
 </head>
 <body>
 
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script defer src="lib/jQuery/1.12.4/jquery.min.js"></script>
-<!-- Include all compiled plugins (below), or include individual files as needed -->
-<script defer src="lib/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-<script defer src="lib/ie10-viewport-bug-workaround/ie10-viewport-bug-workaround.js"></script>
+<audio id="AUDIO_CAN_CLICK">
+    <source src="sound/can_click.wav" type="audio/wav">
+</audio>
 
-<script defer src="js/index.js"></script>
+<audio id="AUDIO_CAN_NOT_CLICK">
+    <source src="sound/no_click.wav" type="audio/wav">
+</audio>
+
+<section class="container-fluid container-full" style="height: 100vh;min-height: 1080px;min-width: 1920px;">
+
+    <!--第一层-->
+    <div class="row" style="height: 31vh;">
+        <div class="col" style="width: 65%;height: 100%;">
+            <!-- 班级 -->
+            <div class="thumbnail thumbnail-1" style="height: 100%;">
+                <div class="row">
+                    <div class="col-xs-3">
+                        <div class="vertical" style="padding: 15px;margin-top: 15vh;">
+                            <h3>3℃</h3>
+                            <h2>21:00</h2>
+                            <h3>星期五 2017/1/16</h3>
+                            <h4 style="margin-top: 20px;">距<span style="color: orange;">《学期结束春节放假》</span>还有10天</h4>
+                        </div>
+                    </div>
+                    <div class="col-xs-5">
+                        <div class="vertical" style="padding: 15px;text-align: center;margin-top: 15vh;">
+                            <h1 style="font-size: 2.8vw;">九年级（二）班</h1>
+                            <h2>
+                                <img style="width: 2.8vw" src="image/xing.png">
+                                <img style="width: 2.8vw" src="image/xing.png">
+                                <img style="width: 2.8vw" src="image/xing.png">
+                                <img style="width: 2.8vw" src="image/xing.png">
+                                <img style="width: 2.8vw" src="image/xing2.png">
+                            </h2>
+                        </div>
+                    </div>
+                    <div class="col-xs-4">
+                        <div class="vertical" style="padding: 15px;text-align: right;margin-top: 15vh;">
+                            <h2>11:00 - 12:00</h2>
+                            <h1>
+                                当前课程：数学
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col" style="width: 13%;height: 100%;">
+            <!--教师-->
+            <div class="thumbnail thumbnail-2" style="height: 100%;">
+                <div class="row" style="height: 35%">
+                    <div class="col" style="width: 50%;">
+                        <h1 style="font-size: 3.6vw;line-height: 8vh;" class="no-padding no-margin text-center">2<span
+                                style="font-size: 18px;">人</span></h1>
+                    </div>
+                    <div class="col" style="width: 50%;">
+                        <h1 style="font-size: 3.6vw;line-height: 8vh;" class="no-padding no-margin text-center">1<span
+                                style="font-size: 18px;">人</span></h1>
+                    </div>
+                </div>
+                <div class="row" style="height: 15%;">
+                    <div class="col" style="width: 50%;margin-top: -5%">
+                        <h2 class="no-padding no-margin text-center">缺勤</h2>
+                    </div>
+                    <div class="col" style="width: 50%;margin-top: -5%">
+                        <h2 class="no-padding no-margin text-center">迟到</h2>
+                    </div>
+                </div>
+                <div class="row" style="height: 9vh;background-color: rgba(255,255,255,.35)">
+                    <div class="col">
+                        <img src="image/4.png" class="img-responsive img-circle img-photo">
+                    </div>
+                    <div class="col text-center vertical" style="width: 55%;margin-top: 4.5vh;">
+                        <h3 class="no-margin">任课老师</h3>
+                        <h3 class="no-margin">刘媛媛</h3>
+                    </div>
+                </div>
+                <div class="row" style="height: 6vh">
+                    <div class="col" style="width: 100%;">
+                        <h3 class="no-margin text-center" style="line-height: 6vh;margin-top: -3%;">本班共学生35人</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col" style="width: 22%;height: 100%;padding: 0;">
+            <div class="col" style="height: 80%;width: 100%;">
+                <div class="thumbnail thumbnail-3" style="height: 100%;">
+                    <div class="row" style="height: 8vh;">
+                        <h1 class="text-center no-margin" style="margin-top: 20px;">
+                            <img src="image/1.png" style="height: 36px;vertical-align: middle;">
+                            <span style="vertical-align: middle;">
+                                班级德行排行
+                            </span>
+                        </h1>
+                    </div>
+                    <div class="row text-center" style="height: 7vh;">
+                        <div class="col col-xs-4">
+                            <h1 class="no-margin text-normal">1</h1>
+                            <h4 class="no-margin text-normal">晚自习扣分</h4>
+                        </div>
+                        <div class="col col-xs-4">
+                            <h1 class="no-margin text-normal">3</h1>
+                            <h4 class="no-margin text-normal">宿舍评分</h4>
+                        </div>
+                        <div class="col col-xs-4">
+                            <h1 class="no-margin text-normal">5</h1>
+                            <h4 class="no-margin text-normal">教师安全</h4>
+                        </div>
+                    </div>
+                    <div class="row text-center" style="height: 7vh;">
+                        <div class="col col-xs-4">
+                            <h1 class="no-margin text-normal">2</h1>
+                            <h4 class="no-margin text-normal">教室值日</h4>
+                        </div>
+                        <div class="col col-xs-4">
+                            <h1 class="no-margin text-normal">4</h1>
+                            <h4 class="no-margin text-normal">值日周</h4>
+                        </div>
+                        <div class="col col-xs-4">
+                            <h1 class="no-margin text-normal">6</h1>
+                            <h4 class="no-margin text-normal">教室纪律</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col" style="height: 20%;width: 100%;">
+                <div class="thumbnail thumbnail-4" style="height: 100%;overflow: hidden;position: relative;">
+                    <h3 class="no-margin auto-show-more" style="line-height: 5vh; ">
+                        <img src="image/2.png"> 今日值日:张三、李四、卫斯理、爱德华、查理</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--第二层-->
+    <div class="row" style="height: 61vh;">
+        <div class="col" style="width: 25%;height: 100%;padding: 0;">
+
+            <div class="col" style="height: 50%;width: 100%;">
+                <div class="thumbnail thumbnail-5" style="height: 100%;">
+                    23123123
+                </div>
+            </div>
+
+            <div class="col" style="height: 50%;width: 100%;">
+                <div class="thumbnail thumbnail-6" style="height: 100%;">
+                    23123123
+                </div>
+            </div>
+
+        </div>
+        <!--轮播-->
+        <div class="col" style="width: 50%;height: 100%;">
+            <div class="thumbnail thumbnail-7" style="height: 100%;padding: 0;">
+                <div id="carousel-example-generic" data-interval="5000" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-can-click="true" data-target="#carousel-example-generic" data-slide-to="0"
+                            class="active"></li>
+                        <li data-can-click="true" data-target="#carousel-example-generic" data-slide-to="1"></li>
+                        <li data-can-click="true" data-target="#carousel-example-generic" data-slide-to="2"></li>
+                    </ol>
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner" role="listbox">
+                        <div class="item active" style="overflow: hidden;">
+                            <img style="height: 60.6vh;width: 100%;" src="image/5.png" alt="...">
+                            <div class="carousel-caption">
+                                最美丽的笑脸，最美丽的笑脸，最美丽的笑脸
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img style="height: 60.6vh;width: 100%;" src="image/5.png" alt="...">
+                            <div class="carousel-caption">
+                                最美丽的笑脸，最美丽的笑脸，最美丽的笑脸
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img style="height: 60.6vh;width: 100%;" src="image/5.png" alt="...">
+                            <div class="carousel-caption">
+                                最美丽的笑脸，最美丽的笑脸，最美丽的笑脸
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Controls -->
+                    <a data-can-click="true"
+                       class="left carousel-control"
+                       href="#carousel-example-generic"
+                       role="button" data-slide="prev">
+                        <span data-can-click="true" class="glyphicon glyphicon-chevron-left"></span>
+                        <span data-can-click="true" class="sr-only">《</span>
+                    </a>
+                    <a data-can-click="true"
+                       id="carousel-example-generic-next"
+                       class="right carousel-control" href="#carousel-example-generic" role="button"
+                       data-slide="next">
+                        <span data-can-click="true" class="glyphicon glyphicon-chevron-right"></span>
+                        <span data-can-click="true" class="sr-only">》</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!--课程表-->
+        <div class="col" style="width: 25%;height: 100%;">
+            <div class="thumbnail thumbnail-8" style="height: 100%;">
+                23123123
+            </div>
+        </div>
+    </div>
+
+    <!--footer-->
+    <div class="row" style="height: 8vh;">
+        <div class="col" style="width: 100%;height: 100%;">
+            <div class="thumbnail thumbnail-9" style="height: 100%;">
+                23123123
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="lib/jQuery/1.12.4/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="lib/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="lib/ie10-viewport-bug-workaround/ie10-viewport-bug-workaround.js"></script>
+
+<script src="js/index.js"></script>
+
 </body>
 </html>
