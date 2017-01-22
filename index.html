@@ -77,15 +77,34 @@
         </div>
         <div class="col" style="width: 13%;height: 100%;">
             <!--教师-->
-            <div class="thumbnail thumbnail-2" style="height: 100%;">
+            <div class="thumbnail thumbnail-2" style="height: 100%;overflow: visible;">
                 <div class="row" style="height: 35%">
-                    <div class="col" style="width: 50%;">
-                        <h1 style="font-size: 3.6vw;line-height: 8vh;" class="no-padding no-margin text-center">2<span
-                                style="font-size: 18px;">人</span></h1>
+                    <div class="col btn-group" style="width: 50%;">
+                        <h1 data-can-click="true" data-toggle="dropdown" style="font-size: 3.6vw;line-height: 8vh;"
+                            class="no-padding no-margin text-center">2<span data-can-click="true"
+                                                                            style="font-size: 18px;">人</span></h1>
+                        <!-- Split button -->
+
+                        <ul data-can-click="true" class="dropdown-menu" role="menu" style="background-color: #96d03c;">
+                            <li><h1 data-can-click="true" class="no-margin text-center"
+                                    style="color: #222;margin: 10px 0;">缺勤</h1></li>
+                            <li class="divider" data-can-click="true"></li>
+                            <li><h2 data-can-click="true" class="no-margin text-center no-padding">小明</h2></li>
+                            <li><h2 data-can-click="true" class="no-margin text-center no-padding">小明</h2></li>
+                        </ul>
                     </div>
-                    <div class="col" style="width: 50%;">
-                        <h1 style="font-size: 3.6vw;line-height: 8vh;" class="no-padding no-margin text-center">1<span
+                    <div class="col btn-group" style="width: 50%;">
+                        <h1 data-can-click="true" data-toggle="dropdown" style="font-size: 3.6vw;line-height: 8vh;"
+                            class="no-padding no-margin text-center">1<span
                                 style="font-size: 18px;">人</span></h1>
+                        <ul data-can-click="true" class="dropdown-menu" role="menu"
+                            style="background-color: #96d03c;right: 0;left: auto">
+                            <li><h1 data-can-click="true" class="no-margin text-center"
+                                    style="color: #222;margin: 10px 0;">迟到</h1></li>
+                            <li data-can-click="true" class="divider"></li>
+                            <li><h2 data-can-click="true" class="no-margin text-center no-padding">小明</h2></li>
+                            <li><h2 data-can-click="true" class="no-margin text-center no-padding">小明</h2></li>
+                        </ul>
                     </div>
                 </div>
                 <div class="row" style="height: 15%;">
@@ -96,14 +115,35 @@
                         <h2 class="no-padding no-margin text-center">迟到</h2>
                     </div>
                 </div>
-                <div class="row" style="height: 9vh;background-color: rgba(255,255,255,.35)">
-                    <div class="col">
-                        <img src="image/4.png" class="img-responsive img-circle img-photo">
+                <div class="row" style="height: 9vh;">
+                    <div class="col-xs-12">
+
+                        <div data-can-click="true" data-toggle="dropdown"
+                             style="background-color: rgba(255,255,255,.35);height: 9vh;">
+                            <div data-can-click="true" class="col">
+                                <img data-can-click="true" src="image/4.png"
+                                     class="img-responsive img-circle img-photo">
+                            </div>
+                            <div data-can-click="true" class="col text-center vertical"
+                                 style="width: 55%;margin-top: 4.5vh;">
+                                <h3 data-can-click="true" class="no-margin">任课老师</h3>
+                                <h3 data-can-click="true" class="no-margin">刘媛媛</h3>
+                            </div>
+                        </div>
+
+                        <ul data-can-click="true" class="dropdown-menu" role="menu"
+                            style="background-color: #96d03c;right: -25%;left: -25%">
+                            <li><h1 data-can-click="true" class="no-margin text-center"
+                                    style="color: #222;margin: 10px 0;">小明老师简介</h1></li>
+                            <li data-can-click="true" class="divider"></li>
+                            <li><h2 data-can-click="true" class="no-margin text-normal no-padding"
+                                    style="padding: 10px;">
+                                小明小明小明小明小明小明小明小明小明小明小明小明小明小明小明小明小明小明小明小明小明</h2></li>
+                        </ul>
+
                     </div>
-                    <div class="col text-center vertical" style="width: 55%;margin-top: 4.5vh;">
-                        <h3 class="no-margin">任课老师</h3>
-                        <h3 class="no-margin">刘媛媛</h3>
-                    </div>
+
+
                 </div>
                 <div class="row" style="height: 6vh">
                     <div class="col" style="width: 100%;">
