@@ -131,7 +131,8 @@
                             </div>
                         </div>
 
-                        <ul data-can-click="true" class="dropdown-menu" role="menu"
+                        <ul data-can-click="true" class="dropdown-menu" role="menu" data-toggle="modal"
+                            data-target="#teachModal"
                             style="background-color: #96d03c;right: -25%;left: -25%">
                             <li><h1 data-can-click="true" class="no-margin text-center"
                                     style="color: #222;margin: 10px 0;">小明老师简介</h1></li>
@@ -346,7 +347,7 @@
     </div>
 
     <!--footer-->
-    <div class="row" style="height: 8vh;">
+    <div class="row" style="height: 8vh;position: fixed;bottom: 0;left: 0;right: 0;z-index: 1051;">
         <div class="col" style="width: 100%;height: 100%;">
             <div class="thumbnail thumbnail-9" style="height: 100%;">
                 <h1 class="text-center no-margin no-padding" style="line-height: 8vh;font-size: 3.6vh;">
@@ -357,6 +358,27 @@
     </div>
 
 </section>
+
+
+<div class="modal fade" id="teachModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" style="width: 90%;">
+        <div class="modal-content"
+             style="min-height: 90vh;background-color: transparent;position: relative;border: none;-webkit-box-shadow:  none;-moz-box-shadow: none;box-shadow:  none;">
+
+            <div style="position: absolute;left: 0;top: 0;bottom: 0;right: 10%;">
+                <h1 class="text-center" style="color: #fff;">教师简介</h1>
+                <div style="width: 100%;height: 80vh;background-color: rgba(26,145,142,0.9);overflow: scroll;">
+
+                </div>
+            </div>
+
+            <div data-can-click="true" style="position: absolute;top: 46%;right: 0;" data-dismiss="modal">
+                <img data-can-click="true" style="height: 8vh;" src="image/9.png">
+            </div>
+
+        </div>
+    </div>
+</div>
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="lib/jQuery/1.12.4/jquery.min.js"></script>
