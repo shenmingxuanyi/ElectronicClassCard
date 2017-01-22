@@ -123,10 +123,42 @@
     font-weight: 100;
 }
 
+.img-photo-master img {
+
+    height: 16vh;
+    width: 16vh;
+    border: 1vh solid #fff;
+
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+
+.img-photo-master {
+
+    margin-top: 2vh;
+
+    display: inline-block;
+
+    width: 20vh;
+
+    height: 20vh;
+
+    background: url("../image/fuck.png");
+
+    -webkit-background-size: cover;
+    background-size: cover;
+
+    padding: 2vh;
+}
+
+.classes-table tr {
+    /*border-style: dashed;*/
+}
+
 *.auto-show-more {
     white-space: nowrap;
     min-width: 100%;
-    position: absolute;
 
     -webkit-animation: auto-show-more 10s linear 0;
     -o-animation: auto-show-more 10s linear 0;
@@ -162,9 +194,18 @@
 
 @keyframes auto-show-more {
     0% {
-        left: -100%;
+        transform: translateX(-100%);
     }
     100% {
         right: -100%;
     }
 }
+
+#classes-table > tbody > tr > td {
+    border-top-style: dashed;
+}
+
+#classes-table > tbody > tr:last-child {
+    border-bottom: 1px dashed #fff;
+}
+
